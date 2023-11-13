@@ -21,6 +21,48 @@
       href="https://fonts.googleapis.com/css2?family=Sen&display=swap"
       rel="stylesheet"
     />
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+      // Array de IDs de videos de YouTube
+      const videoIds = [
+        "D5B4DiAdwHY",
+        "g7s9vFQM51U",
+        "e_9FRJa8SwE",
+        "RCBHwx1UyVQ",
+        "-C2YGz3ZUjA",
+        "yYkTv0Gaobg",
+        "nT2VtAz6fWM",
+        "50U_1bqmRjA",
+        "s7EfMPQ23OM",
+      ];
+
+      // Función para cargar los videos en el contenedor
+      function loadYouTubeVideos() {
+        const videoContainer = document.getElementById("video-container");
+
+        videoIds.forEach((videoId) => {
+          const videoDiv = document.createElement("div");
+          videoDiv.className = "col-md-6 col-12";
+          videoDiv.innerHTML = `
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/${videoId}"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+          ></iframe>
+        `;
+          videoContainer.appendChild(videoDiv);
+        });
+      }
+
+      // Carga la API de YouTube cuando se carga la página
+      function onYouTubeIframeAPIReady() {
+        loadYouTubeVideos();
+      }
+    </script>
   </head>
   <body>
     <nav class="p-0 navbar navbar-expand-lg bg-transparent fixed-top">
@@ -515,9 +557,9 @@
         </li>
       </article>
       <article class="bg-black p-4 row gap-3">
-        <h2 class="font-header display-5 p-3 pb-3">Sobre Nosotros</h2>
         <div class="col-md-6">
-          <p class="font-header-p fs-3">
+          <h2 class="font-header fs-1 p-3 pb-3">Sobre Nosotros</h2>
+          <p class="font-header-p fs-5">
             Gift of Legacy es un esfuerzo filantrópico que facilita el
             intercambio mundial de regalos entre individuos.<br />No hay límites
             geográficos, ya que nuestros miembros se extienden por más de 100
@@ -527,7 +569,7 @@
           </p>
         </div>
         <div class="col-md-5 fs-4">
-          <h5 class="font-header">Contáctanos</h5>
+          <h5 class="font-header fs-1 p-3 pb-3">Contáctanos</h5>
           <p class="font-header-p">
             <img src="img/phone.png" class="p-2" alt="" />+54 15-3755-538503
           </p>
@@ -550,6 +592,7 @@
       </article>
     </section>
   </body>
+
   <script
     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
