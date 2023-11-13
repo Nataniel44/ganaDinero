@@ -288,31 +288,7 @@
         </h3>
         <article class="row align-items-center justify-content-center gap-3">
           <div class="col-12 col-md-5 col-lg-3 d-flex justify-content-center">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/7TjTouO5rZU"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="col-12 col-md-5 col-lg-3 d-flex justify-content-center">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/-ZFrgd9_VS8?start=2s"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="col-12 col-md-5 col-lg-3 d-flex justify-content-center">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/CGWMZM0OvMA"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
+            
           </div>
         </article>
       </section>
@@ -529,47 +505,7 @@
       </article>
     </section>
   </body>
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script>
-    // Array de IDs de videos de YouTube
-    const videoIds = [
-      "D5B4DiAdwHY",
-      "g7s9vFQM51U",
-      "e_9FRJa8SwE",
-      "RCBHwx1UyVQ",
-      "-C2YGz3ZUjA",
-      "yYkTv0Gaobg",
-      "nT2VtAz6fWM",
-      "50U_1bqmRjA",
-      "s7EfMPQ23OM",
-    ];
-
-    // Función para cargar los videos en el contenedor
-    function loadYouTubeVideos() {
-      const videoContainer = document.getElementById("video-container");
-
-      videoIds.forEach((videoId) => {
-        const videoDiv = document.createElement("div");
-        videoDiv.className = "col-12 col-md-4";
-        videoDiv.innerHTML = `
-          <iframe
-            width="100%"
-            height="315"
-            src="https://www.youtube.com/embed/${videoId}"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-        `;
-        videoContainer.appendChild(videoDiv);
-      });
-    }
-
-    // Carga la API de YouTube cuando se carga la página
-    function onYouTubeIframeAPIReady() {
-      loadYouTubeVideos();
-    }
-  </script>
-
+  
 
 
   <script
